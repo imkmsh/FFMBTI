@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <title>List Page</title>
+</head>
+<body>
+    <div class="text">
+        <p style="font-size: 30px; font-weight: bold; text-align: center">Friends List</p>
+    </div>
+  <a href="/results">전체 MBTI 유형 보러가기</a>
+  <hr/>
+  <table style="margin: auto; vertical-align: auto;" border="1">
+    <tr>
+      <th>이름</th>
+      <th>MBTI</th>
+      <th>소개글</th>
+    </tr>
+    <% data.forEach(function (item, index) { %>
+    <tr>
+      <td><%= item.name %></td>
+      <td><%= item.mbti %></td>
+      <td><%= item.about %></td>
+    </tr>
+    <% }); %>
+  </table>
+</body>
+</html>
